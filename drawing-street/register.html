@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登入</title>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+    <script src="common.js"></script>
+</head>
+<body>
+<div class="topbar clearfix" id="topbar">
+    <div class = "wrapper w clearfix">
+            <div class = "nav-list"><a href="index.html"target="_blank">美术街首页</a></div>
+            <div class = "user-info">
+                <ul>
+                    <li><a href="register.html" target="_blank">登录</a></li>
+                    <li><a href="login.html"target="_blank">免费注册</a></li>
+                </ul>
+            </div>
+    </div>
+</div>
+<div class="wp w clearfix">
+        <h1></h1>
+</div>
+<div class="bg">
+    <div class="outwp w ">
+        <div class="weixin clearfix" id="weixin">
+           <div class="wei-w" >
+               <div class="wei-top" id="wei-top">
+                   <span>微信账号登录</span>
+                   <em><img src="images/register/images--fl/close.png" alt="" id="close"/></em>
+               </div>
+               <div class="wei-content"><img src="images/register/images--fl/qrcode.png" alt=""/></div>
+               <div class="wei-foot">关注本站微信公众号登录</div>
+           </div>
+        </div>
+        <div class="lcont clearfix">
+            <p>用户登录</p>
+            用户名：
+            <input type="text"  id="txtName" class = "input" />
+            <span class="tishi"></span></br>
+            密&nbsp;&nbsp;&nbsp;码：
+            <input type="password"  class = "input" id="txtPwd" pattern="/[a-z0-9]/"/>
+            <span class="tishi" ></span></br>
+            <span id="span"></span>
+            <!--<div class="findp">-->
+                <!--<input type="checkbox" id="cookietime-Lfa3v"/>-->
+                <!--<label for="cookietime-Lfa3v">下次自动登录</label>-->
+                <!--&lt;!&ndash;<a href="#">找回密码?</a>&ndash;&gt;-->
+            <!--</div>-->
+            <div class = "lbutton">
+                <!--<input type="button" id="btn" value="登入" style="display: block;width:60px;height: 20px;"/>-->
+                <button id="btn">登陆</button>
+                <div class = "lbutton-right"><span>还没有账号?</span><a href="login.html">立即注册</a></div>
+            </div>
+            <div class="ltex">使用合作网站账号登录：</div>
+            <div class = "login3">
+                <a href="#" calss = "login-qq"><img src="images/register/images--fl/login_qq.png" alt=""/></a>
+                <a href="#" class = "login-sina"><img src="images/register/images--fl/login_sina_01.png" alt=""/></a>
+            </div>
+            <div class="login4">
+                <a href="#" class = "login-weixin"><img src="images/register/images--fl/wechat_login.png" alt=""/></a>
+            </div>
+        </div>
+    </div>
+    <span class = "backtop"></span>
+</div>
+<div class="flk w">
+    <div class="flk-top">
+        <a href="#">关于我们</a>&nbsp;|&nbsp;<a href="#">手机版</a>&nbsp;|&nbsp;<a href="#" class = "guita">美术街</a><span>（沪ICP备12023735号-1）站长统计&nbsp;</span><img
+            src="images/register/images--fl/21.gif" alt=""/>
+    </div>
+    <div class="flk-foot">Copyright 2009 - 2015 Guitarworld.com.cn All Rights Reserved<br />本站资源部分作品来自互联网，版权归原作者所有。<br />如有侵犯您的权益，请联系我们，本站将在第一时间删除。站内网友所发表所有评论不代表本站立场。</div>
+</div>
+<script src="jQuery/jquery-1.12.2.js"></script>
+<script src="js/my.js"></script>
+<script>
+    //childNodes
+    //children
+    //nextSibling 获取的是下一个兄弟姐妹节点！
+    //nextElementSibling  获取下一个元素，但是IE8以前不支持
+    //获取上一个兄弟节点
+    //    btn.previousSibling
+    //    btn.previousElementSibling
+    //做浏览器兼容  放到common.js中
+    //在我输入的时候，验证输入是否合法
+    //1 找到输入用户名的文本框
+    var txtName = document.getElementById("txtName");
+    //2 注册事件
+    //keydown  键盘按下的时候执行 当前按下的键还没有录入文本框
+    //keyup 键盘弹起的时候
+    txtName.onkeyup = function () {
+        //获取下一个兄弟元素 浏览器兼容
+        var nextEl = getNextElement(this);
+        //验证文本框的内容是否合法
+        if (this.value.length < 3 || this.value.length > 7) {
+            setInnerText(nextEl,"内容在3-7位");
+        }else{
+            setInnerText(nextEl,"");
+        }
+    };
+    //验证密码
+    var txtPwd = document.getElementById("txtPwd");
+    txtPwd.onkeyup = function () {
+        //获取下一个兄弟元素 浏 览器兼容
+        var nextEl = getNextElement(this);
+        if(this.value.length < 3 || this.value.length > 8) {
+            setInnerText(nextEl,"内容在3-8位");
+        }else{
+            setInnerText(nextEl,"");
+        }
+    };
+
+
+    var username = document.querySelector("#txtName");
+    var pwd = document.querySelector("#txtPwd");
+    var submit = document.querySelector("#btn");
+    submit.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "./server.php");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send("username=" + username.value + "&" + "pwd=" + pwd.value);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    span.innerHTML = xhr.responseText;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

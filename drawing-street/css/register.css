@@ -1,0 +1,202 @@
+@charset "UTF-8";
+.topbar{
+    width: 100%;
+    height: 30px;
+    background:url("../images/register/images--fl/topbar_bg.gif");
+    line-height: 30px;
+}
+.nav-list{
+    float: left;
+}
+.nav-list a{
+    text-decoration: none;
+    display: block;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+}
+.user-info{
+    float: right;
+}
+.user-info li{
+    float: left;
+    padding: 0 9px;
+}
+.user-info li a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+.wp{
+    height: 122px;
+}
+.wp h1{
+    display: block;
+    width: 269px;
+    height: 87px;
+    background: url("../images/ScreenClip1.png");
+    margin-top: 20px;
+}
+.bg{
+    height: 600px;
+    background: url("../images/register/images--fl/register-bgc.jpg") no-repeat center;
+    position: relative;
+}
+.backtop{
+    display: block;
+    height: 50px;
+    width: 20px;
+    background: url("../images/register/images--fl/scrolltop.png");
+    position: absolute;
+    left:1165px;
+    top:485px;
+    cursor: pointer;
+    display: none;
+}
+.weixin{
+    width: 240px;
+    height: 287px;
+    background-color: rgba(102,102,102,0.2);
+    position: relative;
+    float: left;
+    top: 155px;
+    left:370px;
+    display: none;
+    border-radius: 5px;
+}
+.weixin .wei-w{
+    height: 271px;
+    width: 224px;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: #fff;
+    position: absolute;
+    /*opacity: 1;*/
+}
+.wei-w .wei-top{
+    margin: 10px auto;
+    width: 224px;
+    height: 22px;
+    cursor: move;
+}
+.wei-w .wei-top span{
+    position: relative;
+    left:55px;
+    color: #66666F;
+    font-weight: 700;
+}
+.wei-w .wei-top em{
+    position: relative;
+    left:  115px;
+    cursor: pointer;
+}
+.wei-w .wei-content{
+    margin-top: 25px;
+    height: 174px;
+    width: 174px;
+    margin-left: 23px;
+}
+.wei-w .wei-foot{
+    width: 224px;
+    text-align: center;
+    margin-top: 15px;
+}
+.lcont{
+    float: right;
+    height: 360px;
+    width: 400px;
+    border-radius:5px;
+    background-color: #fff;
+    margin-top: 40px;
+    opacity: 0.8;
+}
+.lcont p{
+    height: 53px;
+    line-height: 53px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+}
+.lcont .input{
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    width: 200px;
+    height: 38px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    /*padding-left: 10px;*/
+}
+.findp{
+    margin-left: 25px;
+    margin-top: -8px;
+    width: 260px;
+}
+.findp a{
+    float: right;
+}
+.lbutton{
+    margin-top: 22px;
+    margin-left: 25px;
+    width: 255px;
+}
+
+.lbutton button{
+    background-color: #85CD2F;
+    height: 35px;
+    width: 95px;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #5BBB1D;
+    border-radius: 3px;
+}
+.lbutton .lbutton-right{
+    float: right;
+}
+.lbutton a{
+    margin-top: 10px;
+    float: left;
+    color: #FD0000;
+}
+.lbutton span{
+    float: left;
+    margin-top: 10px;
+}
+.ltex{
+    height: 36px;
+    line-height: 36px;
+    margin-left: 25px;
+}
+.login3{
+    margin-left: 25px;
+}
+.login3 .login-sina{
+    padding-left: 13px;
+}
+.login4{
+    margin-left: 25px;
+    position: absolute;
+}
+.login4 .login-weixin{
+    position: relative;
+    top: 10px;
+}
+.flk{
+    height: 100px;
+    margin-top: 32px;
+}
+.flk-top{
+    width: 384px;
+    height: 20px;
+    margin: 0 auto;
+}
+.flk-foot{
+    margin: 0 auto;
+    text-align: center;
+}
+.tishi{
+    color: red;
+    font-size: 16px;
+}

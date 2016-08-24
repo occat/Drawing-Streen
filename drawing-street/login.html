@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="jQuery/jquery-1.12.2.js"></script>
+    <script src="js/login.js" charset="UTF-8"></script>
+</head>
+<body>
+<div id="logtop">
+    <div id="logw">
+        <ul id="logwlt" class="lt">
+            <li><a href="index.html"target="_blank">美术街首页</a></li>
+        </ul>
+        <ul id="logwrt" class="rt">
+            <li><a href="register.html" class="delu"target="_blank">登录</a><a href="login.html"target="_blank">免费注册</a></li>
+        </ul>
+    </div>
+</div>
+<div id="logmain" class="w">
+    <div class="logo"><img src="images/ScreenClip1.png" class="space"></div>
+    <!--<div class="logvar"><img src="images/reg_2.jpg"></div>-->
+    <div class="loglt lt clearfix ">
+        <form>
+            <b class="labname">*</b><label>用户名：</label><input type="text" id="inputname"><i></i><br/>
+            <b class="labpas">*</b><label>密码：</label><input id="inputpas" type="password"><i></i><br/>
+            <b class="labpassed">*</b><label>确认密码：</label><input id="inputpassed" type="password"><i></i><br/>
+            <b class="labemail">*</b><label>Email：</label><input id="inputemail" type="text"><i></i><br/>
+            <label class="labaddress">居住地：</label>
+            <select>
+                <option value="">-省份-</option>
+                <option did="1" value="北京市">北京市</option>
+                <option did="2" value="天津市">天津市</option>
+                <option did="3" value="河北省">河北省</option>
+                <option did="4" value="山西省">山西省</option>
+                <option did="5" value="内蒙古自治区">内蒙古自治区</option>
+                <option did="6" value="辽宁省">辽宁省</option>
+                <option did="7" value="吉林省">吉林省</option>
+                <option did="8" value="黑龙江省">黑龙江省</option>
+                <option did="9" value="上海市">上海市</option>
+                <option did="10" value="江苏省">江苏省</option>
+                <option did="11" value="浙江省">浙江省</option>
+                <option did="12" value="安徽省">安徽省</option>
+                <option did="13" value="福建省">福建省</option>
+                <option did="14" value="江西省">江西省</option>
+                <option did="15" value="山东省">山东省</option>
+                <option did="16" value="河南省">河南省</option>
+                <option did="17" value="湖北省">湖北省</option>
+                <option did="18" value="湖南省">湖南省</option>
+                <option did="19" value="广东省">广东省</option>
+                <option did="20" value="广西壮族自治区">广西壮族自治区</option>
+                <option did="21" value="海南省">海南省</option>
+                <option did="22" value="重庆市">重庆市</option>
+                <option did="23" value="四川省">四川省</option>
+                <option did="24" value="贵州省">贵州省</option>
+                <option did="25" value="云南省">云南省</option>
+                <option did="26" value="西藏自治区">西藏自治区</option>
+                <option did="27" value="陕西省">陕西省</option>
+                <option did="28" value="甘肃省">甘肃省</option>
+                <option did="29" value="青海省">青海省</option>
+                <option did="30" value="宁夏回族自治区">宁夏回族自治区</option>
+                <option did="31" value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+                <option did="32" value="台湾省">台湾省</option>
+                <option did="33" value="香港特别行政区">香港特别行政区</option>
+                <option did="34" value="澳门特别行政区">澳门特别行政区</option>
+                <option did="35" value="海外">海外</option>
+                <option did="36" value="其他">其他</option>
+            </select><br/>
+            <b class="labques">*</b><label>验证问答：</label><input id="inputques" type="text" class="ques">
+            <a href="javascript:;" id="change1" onclick="changeques()">换一个</a><s></s>
+            <br/>
+            <span id="ques" class="question">
+            <p>请输入下面问题的答案</p>
+             <label>23 + 9 ＝ ？</label>
+            </span><br>
+            <b class="labma">*</b><label>验证码：</label><input id="inputma" type="text" class="ques spanlab"><a href="javascript:;" id="change2" onclick="changeyzm()">换一个</a><s></s>
+            <br/>
+             <span id="yanz" class="question">
+            <p>请输入下图的字符</p>
+                 <label id="shechengma" class="yanzhema queslab" value=""></label>
+            </span><br>
+            <a href="#"><img src="images/3.png" id = "tj" class="tijiao"></a>
+        </form>
+    </div>
+    <div class="logrt rt clearfix">
+        <div class="logrtcenter">
+            <div class="rttop">
+                已有帐号?<a href="register.html">立即登录</a>
+            </div>
+            <!--<p>使用合作平台帐号登录:</p>-->
+
+            <!--<div class="rtcenter">-->
+                <!--<img src="images/4.png" class="fistimg"><img src="images/6.png">-->
+            <!--</div>-->
+            <!--<div class="rtbott">-->
+                <!--<img src="images/7.png">-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+<div class="loginbottom">
+    <span id="scroll" onclick="window.scrollTo(0,0)" style="left: 1054px; visibility: visible;">回顶部</span>
+    <!--<img id="scroll" class="goback rt" src="images/10.png">-->
+
+    <div class="bottomabout">
+
+        <a href="#" class="bottoma">关于我们</a>
+        <n class="bottoma">|</n>
+        <a href="#" class="bottoma">手机版</a>
+        <n class="bottoma">|</n>
+        <a href="#" class="bottomimport">美术街</a>
+        <a href="#">( 沪ICP备12023735号-1 )</a><a href="#">站长统计</a>
+        <img src="images/8.png">
+    </div>
+    <p class="loginbottomp1">Copyright 2009 - 2015 Guitarworld.com.cn All Rights Reserved</p>
+
+    <p class="loginbottomp2">本站资源部分作品来自互联网，版权归原作者所有。</p>
+
+    <p class="loginbottomp3">如有侵犯您的权益，请联系我们，本站将在第一时间删除。站内网友所发表所有评论不代表本站立场。</p>
+</div>
+
+</body>
+</html>

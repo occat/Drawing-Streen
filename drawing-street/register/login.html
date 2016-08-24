@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="username"/></br>
+<input type="text" id="pwd"/>
+<span id="span"></span></br>
+<input type="button" value="submit" id="submit"/>
+
+
+<script>
+
+    var username = document.querySelector("#username");
+    //username = username.value;
+    var pwd = document.querySelector("#pwd");
+    //pwd = pwd.value;
+    var span = document.querySelector("#span");
+    var submit = document.querySelector("#submit");
+
+    submit.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1/test/server.php");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send("username=" + username.value + "&" + "pwd=" + pwd.value);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    span.innerHTML = xhr.responseText;
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

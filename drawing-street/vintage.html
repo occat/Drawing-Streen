@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <embed src="music/timeTravel.mp3" hidden="true" autostart="true" loop="true"></embed>
+    <meta charset="UTF-8">
+    <title>古典油画</title>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <link rel="stylesheet" href="css/muma.css"/>
+    <link rel="stylesheet" href="css/shop--teah--navbar.css"/>
+    <script type="text/javascript" src="js/animate.js"></script>
+    <script type="text/javascript" src="js/0my.js"></script>
+    <script type="text/javascript" src="js/shop--teah--navbar.js"></script>
+    <link rel="stylesheet" href="jQuery/jquery-ui.min.css"/>
+</head>
+<body>
+<!--引用图片-->
+<!--<div id="imgs">-->
+    <!--<img id="img1" src="images/images1/s6.jpg" width="1400px" height="1920px" alt="蓝色风暴"/>-->
+    <!--<img id="img2" src="images/images1/s7.jpg" width="1400px" height="1920px" alt="木偶的希望"/>-->
+    <!--<img id="img3" src="images/images1/s8.jpg" width="1400px" height="1920px" alt="就是要清新"/>-->
+    <!--<img id="img4" src="images/images1/s9.jpg" width="1400px" height="1920px" alt="ROCK U"/>-->
+<!--</div>-->
+<!--引用图片-->
+<div class="wrap" id="wrap">
+    <div class="slide" id="slide">
+        <ul>
+            <li><a href="#"><img src="images/images1/s6.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/images1/s7.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/images1/s8.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/images1/s9.jpg" alt=""/></a></li>
+            <li><a href="#"><img src="images/images1/s10.jpg" alt=""/></a></li>
+        </ul>
+        <div class="arrow" id="arrow">
+            <a href="javascript:;" class="prev" id="arrLeft"></a>
+            <a href="javascript:;" class="next" id="arrRight"></a>
+        </div>
+    </div>
+</div>
+<div class="sidebar" id="sidebar">
+    <ul id="sidebar_list">
+        <li class="img1">
+            <span><a href="">论坛</a></span>
+            <img src="images/images1/musicbar.fw.png" alt=""/></li>
+        <li class="img2">
+            <span><a id="shift" href="javascript:void(0)">场景</a></span>
+            <img src="images/images1/musicbar.fw.png" alt=""/></li>
+        <li class="img3">
+            <span id="back-to-top"><a> ^Top</a></span>
+            <img src="images/images1/musicbar.fw.png" alt=""/></li>
+    </ul>
+</div>
+<script src=jQuery/jquery-1.12.3.js></script>
+<script src="jQuery/jquery-ui.min.js"></script>
+<!--<script>-->
+    <!--var img1 = document.getElementById("img1").src; //蓝色风暴-->
+    <!--var img2 = document.getElementById("img2").src; //木偶的希望-->
+    <!--var img3 = document.getElementById("img3").src; //就是要清新-->
+    <!--var img4 = document.getElementById("img4").src; //ROCK U-->
+    <!--var imgs = [img1, img2, img3, img4];-->
+    <!--var des = ["蓝色风暴", "木偶的希望", "就是要清新", "ROCK U"];-->
+    <!--var index = 0;-->
+    <!--//场景切换-->
+    <!--document.getElementById("shift").onclick = function () {-->
+        <!--if (index < 4) {-->
+            <!--var body = document.getElementById("body").style;-->
+            <!--body.background = "url(" + imgs[index] + ")";-->
+            <!--document.getElementById("shift").innerHTML = des[index];-->
+        <!--}-->
+        <!--index++;-->
+        <!--index = index > 4 ? 0 : index;-->
+    <!--};-->
+
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>每日一乐</title>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0px;
+            font-size: 12px;
+            background: url(images/bg.gif) repeat center 36px;
+
+            text-align: center;
+            background-color: #c30230;
+        }
+        #content {
+            margin: 0 auto;
+            width: 960px;
+            background: url(images/content_bg.jpg) no-repeat left top;
+            height: 627px;
+        }
+
+        #content .tip1, #content .tip2, #content .tip3, #content .tip4, #content .tip5, #content .tip6, #content .tip7, #content .tip8 {
+            position: absolute;
+            width: 227px;
+            left: 200px;
+            top: 100px;
+        }
+
+        #content .tip1 .tip_h {
+            background: url(images/tip1_h.gif) no-repeat left top;
+        }
+
+        #content .tip1 .tip_h, #content .tip2 .tip_h, #content .tip3 .tip_h, #content .tip4 .tip_h, #content .tip5 .tip_h, #content .tip6 .tip_h, #content .tip7 .tip_h, #content .tip8 .tip_h {
+            width: 227px;
+            padding-top: 45px;
+            height: 23px;
+            text-align: left;
+            cursor: move;
+        }
+        #content .tip1 .tip_c {
+            background: url(images/tip1_c.gif) repeat-y;
+        }
+
+        #content .tip1 .tip_c, #content .tip2 .tip_c, #content .tip3 .tip_c, #content .tip4 .tip_c, #content .tip5 .tip_c, #content .tip6 .tip_c, #content .tip7 .tip_c, #content .tip8 .tip_c {
+            width: 200px;
+            padding-left: 12px;
+            padding-right: 15px;
+            min-height: 40px;
+            text-align: left;
+            line-height: 20px;
+            max-height: 160px;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow: hidden;
+        }
+
+        #content .tip1 .tip_f {
+            background: url(images/tip1_f.gif) no-repeat left top;
+        }
+
+        #content .tip1 .tip_f, #content .tip2 .tip_f, #content .tip3 .tip_f, #content .tip4 .tip_f, #content .tip5 .tip_f, #content .tip6 .tip_f, #content .tip7 .tip_f, #content .tip8 .tip_f {
+            width: 227px;
+            height: 53px;
+            padding-top: 20px;
+        }
+        #content .close, #content .close2 {
+            float: left;
+            font-size: 12px;
+            cursor: pointer;
+            color: #000000;
+        }
+        .clr {
+            clear: both;
+            overflow: auto;
+            display: block;
+            height: 0px;
+        }
+        #content .icon {
+            float: left;
+            width: 35px;
+            padding-left: 15px;
+            height: 35px;
+            text-align: center;
+        }
+        #content .name {
+            float: right;
+            padding-right: 15px;
+            text-align: right;
+            font-size: 14px;
+            line-height: 35px;
+            color: #C0F;
+        }
+        #content .num {
+            float: left;
+            padding-left: 7px;
+            width: 195px;
+        }
+    </style>
+</head>
+<body>
+<div id="content" >
+
+</div>
+<script src="common.js"></script>
+<script>
+    //1 模拟从服务器获取的数据
+    var messages = [
+        {"id":1,"name":"mahu","content":"屌丝和男神打架谁会赢？回复：屌丝，因为屌丝有发达得手。","time":"2016-02-17 00:00:00"},
+        {"id":2,"name":"haha","content":"刚才看到一个身影很像你，我疯了似的追上去，才想起这个城市没有你，我停下了脚步，放下了手中的砖头，艾玛差点打错人","time":"2016-02-18 12:40:00"},
+        {"id":3,"name":"qq","content":"“一起买三只松鼠吗，满199减100”“你一只我一只还有一只给谁？","time":"2016-03-18 12:40:00"},
+        {"id":4,"name":"9.8的妹纸","content":"男子问我：“听说你谈对象了。”朋友答：“是的，成功了三分之二。”男子疑惑道：“此话怎讲？”朋友解释道：“媒人同意了，我同意了，但女方没同意！","time":"2016-03-18 12:40:00"},
+        {"id":5,"name":"雷锋ii.","content":"我走进酒吧，便过去搭讪：有人邀吗？“我就是”","time":"2016-02-22 12:40:00"},
+        {"id":6,"name":"哎呦哥哥.","content":"据说今晚央视的元宵晚会导演和春晚导演是同一个人，真是躲得过初一，躲不过十五。","time":"2016-02-22 01:30:00"},
+        {"id":7,"name":"balabala","content":"班主任:“小明，你都十二岁了，还是三年级，不觉得羞愧吗”？。小明:“一点也不觉得，老师你都四十多岁了，不也是年年在三年级混日子吗？羞愧的应该是你”。老师:……","time":"2016-02-22 01:30:00"},
+        {"id":8,"name":"daladala.","content":"真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，","time":"2016-02-22 01:30:00"},
+        {"id":9,"name":"哎呦哎呦","content":"今天哪里的烟花最好看！！？答：朋友圈。。。","time":"2016-02-22 02:30:00"}
+    ];
+
+    var zIndex = 0;
+    //2 遍历数据，生成纸条
+    for(var i = 0; i < messages.length; i++) {
+        //数据
+        var msg = messages[i];
+
+        //生成纸条最外层的div---设置属性，注册事件
+        var tip = document.createElement("div");
+        my$("content").appendChild(tip);
+        tip.className = "tip1";
+        //拼接字符串
+        var html = '<div class="tip_h" title="双击关闭纸条">' +
+                '<div class="num">第['+ msg.id  +']条 '+ msg.time +'</div>' +
+                '<div class="close" title="关闭纸条" >×</div>' +
+                '<div class="clr"></div>' +
+                '</div>' +
+                '<div class="tip_c">' +
+                msg.content +
+                '</div>' +
+                '<div class="tip_f">' +
+                '<div class="icon">' +
+                '<img src="images/bpic_1.gif" alt="" title="">' +
+                '</div>' +
+                '<div class="name">'+ msg.name +'</div>' +
+                '<div class="clr"></div>' +
+                '</div>';
+
+
+        tip.innerHTML = html;
+
+        //随机生成位置
+        //400- 800
+        var x = parseInt(Math.random()*400 + 400);
+        //0-500
+        var y = parseInt(Math.random()*500);
+        tip.style.left = x + "px";
+        tip.style.top = y + "px";
+
+        //给纸条注册单击事件  设置zIndex
+        tip.onclick = function () {
+            zIndex++;
+            this.style.zIndex = zIndex.toString();
+        };
+
+        //获取title，注册双击事件，关闭纸条(移除)
+//        var tipH = tip.firstElementChild;
+        var tipH = getFirstElement(tip);
+        tipH.ondblclick = function () {
+//            this.parentNode.parentNode.removeChild(this.parentNode);
+
+            //当前的纸条
+            var zt = this.parentNode;
+            zt.parentNode.removeChild(zt);
+        };
+
+    }
+</script>
+</body>
+</html>

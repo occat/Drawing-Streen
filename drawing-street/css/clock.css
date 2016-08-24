@@ -1,0 +1,159 @@
+
+.clock{
+    width: 160px;
+    height: 160px;
+    border: 6px solid #00FFFE;
+    border-radius: 86px;
+    position: absolute;
+    left: 1120px;
+    top: 400px;
+    /*transform-style: preserve-3d;*/
+    perspective: 1000px;
+    /*z-index: 100;*/
+    transform-origin: bottom;
+    animation: move3 5s infinite alternate;
+    /*z-index: 3;*/
+}
+.line{
+    height: 160px;
+    width: 6px;
+    background-color: #00FFFE;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -80px;
+    margin-left: -3px;
+}
+.line1{
+    background-color: yellow;
+}
+.line2{
+    transform: rotate(30deg);
+}
+.line3{
+    transform: rotate(60deg);
+}
+.line4{
+    transform: rotate(90deg);
+    background-color: yellow;
+}
+.line5{
+    transform: rotate(120deg);
+}
+.line6{
+    transform: rotate(150deg);
+}
+.pan{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -60px 0 0 -60px;
+    background-color: #fff;
+}
+.min{
+    height: 50px;
+    width: 6px;
+    background-color: #000000;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: 30px;
+    transform-origin: center bottom;
+    animation: move 3600s steps(60) infinite;
+}
+.hour{
+    height: 30px;
+    width: 10px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /*transform: rotate(30deg);*/
+    transform-origin: center bottom;
+    margin-left: -5px;
+    margin-top: -30px;
+    animation: move 43200s steps(12) infinite;
+}
+.sec{
+    height: 60px;
+    width: 4px;
+    background-color: #FF00FE;
+    position: absolute;
+    left: 50%;
+    margin-top:20px ;
+    transform-origin: center bottom;
+    animation: move 60s steps(60) infinite;
+}
+.dotted{
+    height: 16px;
+    width: 16px;
+    background-color: #000000;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -8px 0 0 -8px;
+}
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.shengzi{
+    width: 2px;
+    height: 170px;
+    background-color: #00FFFE;
+    position: absolute;
+    left: 1205px;
+    top:240px;
+    transform-origin: center top;
+    animation: move2 5s infinite alternate;
+
+}
+/*.clocks{*/
+    /*width: 230px;*/
+    /*height: 500px;*/
+    /*position: absolute;*/
+    /*background-color: red;*/
+    /*top: 200px;*/
+    /*left: 1000px;*/
+    /*transform-origin: center top;*/
+    /*animation: move2 3s infinite;*/
+
+/*}*/
+@keyframes move2 {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+@keyframes move3 {
+0% {
+    transform: rotate(15deg) translateZ(-50px);
+
+}
+
+100% {
+    /*transform: rotate(15deg);*/
+    transform: rotate(-15deg) translateZ(-50px);
+}
+}
+.videos{
+    position: absolute;
+    margin: 0 auto;
+    height: 300px;
+    top:1000px;
+    left: 200px;
+    width: 700px;
+
+}

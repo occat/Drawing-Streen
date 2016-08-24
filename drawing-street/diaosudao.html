@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>雕塑刀</title>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <script src="js/cookie.js"></script>
+    <style>
+        .syn-l {
+            width: 400px;
+            height: 600px;
+        }
+
+        .syn-l ul li {
+            float: left;
+        }
+
+        .syn-img {
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+
+        .syn-l ul {
+            position: absolute;
+            top: 500px;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        .syn-r {
+            position: absolute;
+            right:272px;
+            top: 31px;
+            width: 400px;
+            height: 500px;
+            /*background-color: red;*/
+        }
+        h1{
+            font: 700 20px "微软雅黑";
+            padding-top: 100px;
+        }
+        .syn-p1{
+            margin: 7px 0;
+            padding: 20px 0;
+            background-color: #E8DBDB;
+        }
+        .syn-r span{
+            color: red;
+            font: 700 18px "微软雅黑";
+        }
+        .syn-p2{
+            padding: 10px 0;
+        }
+        .syn-p3{
+            padding: 10px 0;
+        }
+        .btn1{
+            display: inline-block;
+            margin: 10px 0;
+            height: 36px;
+            width: 134px;
+            background-image: url("images/ScreenClip5.png");
+        }
+        .btn2{
+            display: inline-block;
+            height: 35px;
+            width:71px;
+            background-image: url("images/ScreenClip6.png");
+        }
+        .syn-p4{
+            padding: 10px 0;
+        }
+        .zhanlan{
+            position: relative;
+            top: -6px;
+            background-color: #E4DADA;
+            text-align: center;
+        }
+        .detail{
+            height: 30px;
+            width: 150px;
+            background-color: #E4DADA;
+            position: relative;
+            top: 5px;
+            color: #000;
+            font: 700 18px/30px "微软雅黑";
+            text-align: center;
+            right: 500px;
+        }
+        /*.btn{*/
+        /*top: 200px;*/
+        /*height: 40px;*/
+        /*background-image: url("images/ScreenClip5.png");*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="topbar">
+    <div class="wrapper w clearfix">
+        <div class="nav-list"><a href="index.html"target="_blank">美术街首页</a></div>
+        <div class="user-info">
+            <ul>
+                <li><a href="register.html"target="_blank">登录</a></li>
+                <li><a href="login.html"target="_blank">免费注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="synopsis w clearfix">
+    <div class="syn-l">
+        <div class="syn-img">
+            <img id="image" src="images/1-big.png" alt="" width="450px"/>
+        </div>
+        <div>
+            <ul id="imagegallery">
+                <li><a href="images/diao-1111.png" title="图片A">
+                    <img src="images/diao-1.jpg" width="54" alt="图片1"/>
+                </a></li>
+                <li><a href="images/diao-2.png" title="图片B">
+                    <img src="images/diao-2.jpg" width="54" alt="图片2"/>
+                </a></li>
+                <li><a href="images/diao-3.png" title="图片C">
+                    <img src="images/diao-3.jpg" width="54" alt="图片3"/>
+                </a></li>
+                <li><a href="images/diao-4.png" title="图片D">
+                    <img src="images/diao-4.jpg" width="54" alt="图片4"/>
+                </a></li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+        <p id="des">选择一个图片</p>
+    </div>
+    <div class="syn-r">
+        <h1> 软陶泥粘土泥塑工具泥塑刀立体雕塑橡皮泥陶艺粘土雕塑材料 款2</h1>
+        <p class="syn-p1">惊爆价：<span>￥30.00</span> (降价通知)</p>
+        <p class="syn-p3">配送至
+            <select name="" id="">
+                <option value="">唐山市</option>
+                <option value="">石家庄</option>
+                <option value="">北京市</option>
+                <option value="">秦皇岛</option>
+            </select>
+            有货，支持 货到付款店铺单笔订单不满68元，收运费8元</p>
+        <p class="syn-p2">服务：由<span>画材专营店</span>从江苏南京市 发货，并提供售后服务。</p>
+        <!--<a href="#"><img src="images/ScreenClip5.png" alt="加入购物车"/></a>-->
+        <input type="button"class="btn1" onclick="add_cart(4)"/>
+        <input type="button"class="btn2"/>
+        <p class="syn-p4">温馨提示：支持7天无理由退换货</p>
+    </div>
+</div>
+<div class="detail w">商品详情</div>
+<hr/>
+<div class="zhanlan">
+    <img src="images/diao-111.jpg" alt=""/>
+    <img src="images/diao-222.jpg" alt=""/>
+    <img src="images/diao-333.jpg" alt=""/>
+    <img src="images/diao-444.jpg" alt=""/>
+    <img src="images/diao-555.jpg" alt=""/>
+</div>
+<div class="flk w">
+    <div class="flk-top">
+        <a href="#">关于我们</a>&nbsp;|&nbsp;<a href="#">手机版</a>&nbsp;|&nbsp;<a href="#" class="guita">美术街</a><span>（沪ICP备12023735号-1）站长统计&nbsp;</span><img
+            src="images/register/images--fl/21.gif" alt=""/>
+    </div>
+    <div class="flk-foot">Copyright 2009 - 2015 Guitarworld.com.cn All Rights Reserved<br/>本站资源部分作品来自互联网，版权归原作者所有。<br/>如有侵犯您的权益，请联系我们，本站将在第一时间删除。站内网友所发表所有评论不代表本站立场。
+    </div>
+</div>
+<script>
+    //1 获取DOM对象--a标签
+    //1.1 先获取ul
+    var ul = document.getElementById("imagegallery");
+    //1.2 再获取ul中的a标签
+    var links = ul.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        //2 给DOM对象注册事件 -- a标签
+        var link = links[i];
+        link.onclick = function () {
+//            alert("test");
+            //写完之后先alert 测试是否注册事件成功
+//            alert("aa");
+
+            //3 切换图片和描述
+            //测试的this就是当前点击的a标签
+//            this
+            //获取到img和p标签
+            var img = document.getElementById("image");
+            var p = document.getElementById("des");
+            img.src = this.href;
+            //innerText后面讲
+//            p.innerText = this.title;
+            setInnerText(p, this.title);
+            //兼容浏览器
+            //取消a标签的默认行为 -- 跳转
+            return false;
+        };
+    }
+    function setInnerText(element, content) {
+        if (typeof element.innerText === "string") {
+            element.innerText = content;
+        } else {
+            element.textContent = content;
+        }
+    }
+</script>
+</body>
+</html>

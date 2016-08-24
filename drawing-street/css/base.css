@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/*css 初始化 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff') format('woff'), /* chrome、firefox */ url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉蓝色边框*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+/*去掉行内替换元素空白缝隙*/
+select, input {
+    vertical-align: middle;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*防止拖动 影响布局*/
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体 unicode !*/
+    color: #666;
+    background: #fff;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C13DBF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*京东色*/
+.col-red {
+    color: #C13DBF !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+
+/*顶部工具栏start*/
+
+.shortcut {
+    /*height: 30px;*/
+    line-height: 30px;
+    background-color: #D8DAD9;
+}
+
+.shortcut .w {
+    background-color: #D8DAD9;
+}
+
+.shortcut li {
+    float: left;
+    padding: 0 10px;
+    cursor: default;
+}
+
+.shortcut .spacer {
+    width: 1px;
+    height: 12px;
+    padding: 0;
+    margin-top: 9px;
+    background-color: #DDD;
+}
+
+.shortcut .tel-li {
+    padding-left: 27px;
+}
+
+.tel-li .tel-icon {
+    width: 15px;
+    height: 20px;
+    background-color: pink;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    background: url(../images/jd2015img.png) 0 0 no-repeat;
+}
+
+.shortcut .dropdown {
+    padding-right: 25px;
+    position: relative;
+}
+
+/*.dropdown i {*/
+    /*position: absolute;*/
+    /*top: 12px;*/
+    /*right: 8px;*/
+    /*width: 15px;*/
+    /*height: 9px;*/
+    /*overflow: hidden;*/
+/*}*/
+
+.dropdown s {
+    font: 400 15px/15px consolas; /*合写font: 加粗 字号/行高 字体*/
+    color: #6A6A6A;
+    position: absolute;
+    top: -7px;
+    left: 0;
+}
+
+/*顶部工具栏end*/
+
+/*顶部广告栏start*/
+
+.topbanner {
+    background-color: #D8DAD9;
+}
+.topbanner .banner-parent img{
+    display: block;
+    margin:0 auto;
+}
+.banner-parent {
+    position: relative;
+}
+
+/*.topbanner .close-banner {*/
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*right: 0;*/
+    /*width: 19px;*/
+    /*height: 19px;*/
+    /*background: url(../images/close.png) 0 0 no-repeat;*/
+/*}*/
+
+/*.topbanner .close-banner:hover {*/
+    /*background: url(../images/close.png) 0 -19px no-repeat;*/
+/*}*/
+
+/*顶部广告栏end*/
+
+/*header部分start*/
+.header {
+    height: 100px;
+    /*background-color: pink;*/
+}
+
+.logo {
+    float: left;
+    width: 362px;
+    height: 90px;
+    /*padding: 20px 0;*/
+    /*background-color: red;*/
+    position: relative;
+}
+
+.logo .logo-img {
+    display: block;
+    width: 270px;
+    height: 90px;
+    background: url(../images/ScreenClip1.png);
+    text-indent: -9999px;
+}
+
+/*.db11 {*/
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*left: 170px;*/
+/*}*/
+
+.search {
+    float: left;
+    width: 538px;
+    /*height: 61px;*/
+    margin-top: 25px;
+    background-color: blue;
+}
+
+.search input {
+    float: left;
+    width: 450px;
+    padding-left: 4px;
+    height: 32px;
+    border: 2px solid black;
+    color: rgb(153, 153, 153);
+    font: 400 14px/32px "microsoft yahei";
+}
+
+.search button {
+    float: left;
+    width: 80px;
+    height: 36px;
+    background-color: black;
+    font: 400 16px/36px "microsoft yahei";
+    color: #FFF;
+    cursor: pointer;
+}
+
+.car {
+    float: right;
+    width: 96px;
+    height: 34px;
+    line-height: 34px;
+    margin: 25px 65px 0 0;
+    padding-left: 43px;
+    border: 1px solid #DFDFDF;
+    background-color: #00FFFE;
+    position: relative;
+    border-radius: 7px 7px 7px;
+}
+
+.car .icon1 {
+    position: absolute;
+    top: 10px;
+    left: 19px;
+    width: 16px;
+    height: 13px;
+    background: url(../images/jd2015img.png) -1px -59px no-repeat;
+}
+
+.car .icon2 {
+    font: 400 13px/13px simsun;
+    color: #999;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+}
+
+.car .icon3 {
+    position: absolute;
+    top: -4px;
+    left: 104px;
+    min-width: 12px;
+    height: 14px;
+    padding: 0 2px;
+    background-color:#C841C3;
+    font: 400 12px/14px Arial, Verdana, "\5b8b\4f53";
+    color: #FFF;
+    text-align: center;
+    border-radius: 7px 7px 7px 0;
+}
+
+.footer {
+    /*height: 491px;*/
+    background-color: #C5DCE1;
+    position: relative;
+}
+.footer .bottom {
+    height: 200px;
+    /*background-color: blue;*/
+    border-top: 1px solid #C5DCE1;
+    text-align: center;
+}
+
+.footer .bottom .links {
+    margin-top: 20px;
+}
+
+.bottom .links a {
+    margin: 0 10px;
+}
+
+.footer .bottom .copyright {
+    margin-top: 15px;
+}

@@ -1,0 +1,207 @@
+.zhengfangti{
+    position: absolute;
+    height:100px;
+    width: 100px;
+    /*margin: 150px auto;*/
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+    transition: all 1s;
+    top: 740px;
+    left:150px;
+
+}
+
+.zhengfangti div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.zhengfangti section {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    /*opacity: 0.9;*/
+    background-color: black;
+    top:25%;
+    left:25%;
+
+}
+.zhengfangti .left {
+    background-color: red;
+    transform: rotateY(90deg) translateZ(50px);
+}
+.zhengfangti .right {
+    background-color: blue;
+    transform: rotateY(90deg) translateZ(-50px);
+}
+.zhengfangti .top {
+    background-color: yellow;
+    transform: rotateX(90deg) translateZ(50px);
+}
+.zhengfangti .bottom {
+    background-color: darkmagenta;
+    transform: rotateX(90deg) translateZ(-50px);
+}
+.zhengfangti .back {
+    background-color: green;
+    transform:translateZ(-50px);
+}
+.zhengfangti .front {
+    background-color: aqua;
+    transform:translateZ(50px);
+}
+.left1 {
+    /*background-color: red;*/
+    transform: rotateY(90deg) translateZ(25px);
+}
+.right1 {
+    /*background-color: blue;*/
+    transform: rotateY(90deg) translateZ(-25px);
+}
+.top1 {
+    /*background-color: yellow;*/
+    transform: rotateX(90deg) translateZ(25px);
+}
+.bottom1 {
+    /*background-color: darkmagenta;*/
+    transform: rotateX(90deg) translateZ(-25px);
+}
+.back1 {
+    /*background-color: green;*/
+    transform:translateZ(-25px);
+}
+.front1 {
+    /*background-color: aqua;*/
+    transform:translateZ(25px);
+}
+.zhengfangti:hover .left{
+    transform: rotateY(90deg) translateZ(300px) rotateZ(90deg);
+}
+.zhengfangti:hover .right{
+    transform: rotateY(90deg) translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti:hover .top{
+    transform: rotateX(90deg) translateZ(300px) rotateZ(90deg);
+}
+.zhengfangti:hover .bottom{
+    transform: rotateX(90deg) translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti:hover .back{
+    transform:translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti:hover .front{
+    transform:translateZ(300px) rotateZ(90deg);
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+/*µÚ¶þ¸ö*/
+.zhengfangti2{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /*margin: 150px auto;*/
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+    transition: all 1s;
+
+}
+.zhengfangti2{
+    top: 1000px;
+    left:1100px;
+}
+.zhengfangti2 div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+.zhengfangti2 section {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    /*opacity: 0.9;*/
+    background-color: black;
+    top:25%;
+    left:25%;
+
+}
+.zhengfangt2 .left {
+    background-color: red;
+    transform: rotateY(90deg) translateZ(200px);
+}
+.zhengfangti2 .right {
+    background-color: blue;
+    transform: rotateY(90deg) translateZ(-200px);
+}
+.zhengfangti2 .top {
+    background-color: yellow;
+    transform: rotateX(90deg) translateZ(200px);
+}
+.zhengfangti2 .bottom {
+    background-color: darkmagenta;
+    transform: rotateX(90deg) translateZ(-200px);
+}
+.zhengfangti2 .back {
+    background-color: green;
+    transform:translateZ(-200px);
+}
+.zhengfangti2 .front {
+    background-color: aqua;
+    transform:translateZ(200px);
+}
+.zhengfangti2 .left1 {
+    /*background-color: red;*/
+    transform: rotateY(90deg) translateZ(100px);
+}
+.zhengfangti2 .right1 {
+    /*background-color: blue;*/
+    transform: rotateY(90deg) translateZ(-100px);
+}
+.zhengfangti2 .top1 {
+    /*background-color: yellow;*/
+    transform: rotateX(90deg) translateZ(100px);
+}
+.zhengfangti2 .bottom1 {
+    /*background-color: darkmagenta;*/
+    transform: rotateX(90deg) translateZ(-100px);
+}
+.zhengfangti2 .back1 {
+    /*background-color: green;*/
+    transform:translateZ(-100px);
+}
+.zhengfangti2 .front1 {
+    /*background-color: aqua;*/
+    transform:translateZ(100px);
+}
+.zhengfangti2:hover .left{
+    transform: rotateY(90deg) translateZ(300px) rotateZ(90deg);
+}
+.zhengfangti2:hover .right{
+    transform: rotateY(90deg) translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti2:hover .top{
+    transform: rotateX(90deg) translateZ(300px) rotateZ(90deg);
+}
+.zhengfangti2:hover .bottom{
+    transform: rotateX(90deg) translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti2:hover .back{
+    transform:translateZ(-300px) rotateZ(90deg);
+}
+.zhengfangti2:hover .front{
+    transform:translateZ(300px) rotateZ(90deg);
+}

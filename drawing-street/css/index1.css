@@ -1,0 +1,133 @@
+/*banner 部分开始*/
+.banner_left {
+    width: 958px;
+    /*margin-right: 10px;*/
+    position: relative;
+    z-index: 50;
+    /*overflow: hidden;*/
+}
+.banner_main {
+    position: relative;
+    width: 8000px;
+}
+.banner_main li{
+    float: left;
+}
+
+
+.banner_focus {
+    background: #000;
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+    padding: 4px 10px;
+    border-radius: 30px;
+}
+.banner_focus li{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 3px;
+    background: #919090 none repeat scroll 0 0;;
+    border: 2px solid #626262;
+}
+.banner_focus .current {
+    background: #fff;
+}
+.banner_leftList {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 22px 0;
+    color: #FFF;
+    background-color: #00FFFE;
+}
+.banner_details {
+    background: #F9F9F9;
+    width: 56px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 233px;
+    border: 1px solid #E0E0E0;
+    padding: 0 32px;
+    display: none;
+}
+.banner_details ul li i{
+    width: 56px;
+    /*height: 56px;*/
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 56px;
+    background: #EEEEEE;
+    color: #979797;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+.banner_leftList li {
+    width: 152px;
+    line-height: 36px;
+    padding-left: 38px;
+    padding-right: 43px;;
+}
+.banner_left li span {
+    float: right;
+    line-height: 36px;
+}
+
+.banner_leftList li:hover {
+    background: #055C92;
+}
+
+.banner_arrRight {
+    height: 73px;
+    width: 43px;
+    background: rgba(0, 0, 0, 0.4);
+    display: block;
+    line-height: 73px;
+    text-align: center;
+    /*display: none;*/
+}
+.banner_arrLeft i,
+.banner_arrRight i {
+    margin-top: 10px;
+}
+.banner_arrLeft {
+    position: absolute;
+    left: 233px;
+    top: 50%;
+    margin-top: -31.5px;
+}
+
+.banner_arrRight {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -31.5px;
+}
+
+.banner_right .banner_rightT {
+    width: 231px;
+    height: 45px;
+    background: #055C92;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.banner_right .banner_rightB {
+    padding: 16px 0px 16px 19px;
+    background: #F9F9F9;
+    border: 1px solid #E0E0E0;
+}
+
+.banner_right .banner_rightB li {
+    list-style-type: square;
+    color: #055C92;
+    line-height: 36px;
+}
+
+/*banner部分结束*/

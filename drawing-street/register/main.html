@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("get","./session.php");
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState ===4 && xhr.status ===200){
+            //连接成功，获得用户名
+            document.body.innerHTML = xhr.responseText;
+        }
+    }
+</script>
+</body>
+</html>

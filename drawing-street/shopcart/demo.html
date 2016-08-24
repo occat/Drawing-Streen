@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="favicon.fw.png" />
+    <script type="text/javascript" src="js/demo.js"></script>
+</head>
+<body>
+<table id="cartTable">
+    <thead>
+        <tr>
+            <th><label><input class="check-all check" type="checkbox"/>&nbsp;全选</label></th>
+            <th>商品</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody id="list">
+    </tbody>
+</table>
+<div class="foot" id="foot">
+    <label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;全选</label>
+    <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+    <div class="fr closing">结 算</div>
+    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+    <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
+    <div class="selected-view">
+        <div id="selectedViewList" class="clearfix">
+            <div><img src="images/1.jpg"><span>取消选择</span></div>
+        </div>
+        <span class="arrow">◆<span>◆</span></span>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery-1.12.2.js"></script>
+<script>
+
+            
+    function setCookie(c_name, value, expiredays) {
+            var exdate = new Date()
+            exdate.setDate(exdate.getDate() + expiredays)
+            document.cookie = c_name + "=" + escape(value) +
+                ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+        }
+    function getCookie(c_name) {
+            if (document.cookie.length > 0) {
+                c_start = document.cookie.indexOf(c_name + "=")
+                if (c_start != -1) {
+                    c_start = c_start + c_name.length + 1
+                    c_end = document.cookie.indexOf(";", c_start)
+                    if (c_end == -1) c_end = document.cookie.length
+                    return unescape(document.cookie.substring(c_start, c_end))
+                }
+            }
+            return ""
+        }
+
+        var str1 = getCookie('add1');
+        if(str1){
+            $('#list').append(str1);  
+        }
+        var str2 = getCookie('add2');
+        if(str2){
+            $('#list').append(str2);  
+        }
+        var str3 = getCookie('add3');
+        if(str3){
+            $('#list').append(str3);  
+        }
+        var str4 = getCookie('add4');
+        if(str4){
+            $('#list').append(str4);  
+        }
+        var str5 = getCookie('add5');
+        if(str5){
+            $('#list').append(str5);  
+        }
+        var str6 = getCookie('add6');
+        if(str6){
+            $('#list').append(str6);  
+        }
+        var str7 = getCookie('add7');
+        if(str7){
+            $('#list').append(str7);  
+        }
+        var str8 = getCookie('add8');
+        if(str8){
+            $('#list').append(str8);  
+        }
+</script>
